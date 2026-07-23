@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+
+      int height;
+      int row;
+      int space;
+      int star;
+
+      height = scnr.nextInt();
+
+      for (row = 1; row <= height; row++) {
+         for (space = 1; space <= height - row; space++) {
+            System.out.print("  ");
+         }
+         for (star = 1; star <= row; star++) {
+            System.out.print("* ");
+         }
+         System.out.println();
+      }
+   }
+}
