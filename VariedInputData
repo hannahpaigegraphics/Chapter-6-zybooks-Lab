@@ -1,0 +1,25 @@
+import java.util.Scanner; 
+
+public class VariedInputData {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+
+      int input;
+      int sum = 0;
+      int count = 0;
+      int max = 0;
+
+      input = scnr.nextInt();
+
+      while (input >= 0) {
+        sum += input;
+        count++;
+
+        if (input>max) {
+            max = input;
+        }
+        input = scnr.nextInt();
+      }
+      System.out.println(sum/count + " " + max);
+   }
+}
