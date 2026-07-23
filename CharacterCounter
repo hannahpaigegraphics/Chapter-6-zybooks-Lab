@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class CharacterCounter {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+
+    char searchChar;
+    String inputString;
+    int count = 0;
+
+    searchChar = scnr.next().charAt(0);
+    inputString = scnr.nextLine();
+
+    for (int i = 0; i < inputString.length(); i++) {
+        if (inputString.charAt(i) == searchChar) {
+            count++;
+        }
+    }
+    System.out.println(count);
+   }
+}
