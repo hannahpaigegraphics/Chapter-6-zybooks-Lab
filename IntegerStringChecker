@@ -1,0 +1,24 @@
+import java.util.Scanner; 
+
+public class IntegerStringChecker {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      String userString;
+      boolean allDigits = true;
+
+      userString = scnr.next();
+      
+      for (int i = 0; i < userString.length(); i++) {
+        if (!Character.isDigit(userString.charAt(i))) {
+            allDigits = false;
+            break;
+        }
+      }
+      if (allDigits) {
+        System.out.println("yes");
+      }
+      else {
+        System.out.println("no");
+      }
+   }
+}
